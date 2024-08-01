@@ -7,8 +7,10 @@ public class GameManager : MonoBehaviour
 {
     //Public variables
     public static GameManager Instance;
+    public GameObject startUI;
+    public GameObject scoreUI;
     //Private variables
-    [SerializeField] private GameObject GameOverUI;
+    [SerializeField] private GameObject gameOverUI;
     //Protected variables
 
     private void Awake()
@@ -38,7 +40,7 @@ public class GameManager : MonoBehaviour
 
     public void GetGameOverUI()
     {
-        GameOverUI.SetActive(true);
+        gameOverUI.SetActive(true);
         Time.timeScale = 0f;
     }
 
